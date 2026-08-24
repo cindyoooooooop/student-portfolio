@@ -7,15 +7,18 @@ const projects = [
 ]
 export default function Projects() {
   return (
-    <div>
-      <h1>Projects</h1>
-      {projects.map(project => (
-        <div key={project.id}>
-          <h2>{project.title}</h2>
-          <p>{project.description}</p>
-          <Link to={`/projects/${project.id}`}>View Details</Link>
-        </div>
-      ))}
+    <div className="page">
+      <h1 className="section-title">My Projects</h1>
+      <div className="card-grid">
+        {projects.map(project => (
+          <div className="card" key={project.id}>
+            <span className="card-number">PROJECT {String(project.id).padStart(2, '0')}</span>
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+            <Link to={`/projects/${project.id}`}>View Details →</Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

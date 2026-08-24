@@ -19,6 +19,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <footer>made by Cindy</footer>
     </div>
   );
 }
